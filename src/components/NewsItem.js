@@ -7,8 +7,12 @@ export class NewsIteam extends Component {
       <>
         <div className="my-3">
           <div className="card" >
-            <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{zIndex:"1" , left: "90%"}}>{source} 
-            </span>
+            <div style={{display: "flex",
+                  justifyContent: "flex-end",
+                  position: "absolute",
+                  right: "0"}}>
+              <span class=" badge rounded-pill bg-danger">{source} </span>
+            </div>
             <img src={!imageUrl?"https://cdn.mos.cms.futurecdn.net/Ndg2z6YZD9YyNZAi6z57R4-1200-80.gif ":imageUrl} className="card-img-top" alt="..." />
             <div className="card-body">             
               <h5 className="card-title">{title}</h5>
